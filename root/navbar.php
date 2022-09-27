@@ -10,11 +10,9 @@
 </head>
 <body>
 
-<div class="navbar">
-    <nav>
-        
-    </nav>
-</div>
-    
+<?php 
+include "../root/footer.php";
+?>
+
 </body>
 </html>

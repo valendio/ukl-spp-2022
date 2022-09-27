@@ -2,12 +2,13 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$database = "pembayaran_spp";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$connect = new mysqli($servername, $username, $password, $database);
 
 // Check connection
-if ($conn->connect_error) {
+if ($connect->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
