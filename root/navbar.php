@@ -1,5 +1,7 @@
 <!-- <<<<<<< HEAD -->
-<?php ?>
+<?php session_start(); 
+print_r($_SESSION);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +33,13 @@
           <li><a href="#">Transaksi</a></li>
           <li><a href="#">Log Out</a></li>
           <li><a href="../login/logout/logout.php">Log Out</a></li>
+          <!-- <?php if($_SESSION['role'] == 'petugas') { ?>
+            <li><a href="#">Hapus Data</a></li>  
+          <?php }?>
+          <?php if($_SESSION['role'] == 'admin') { ?>
+            <li><a href="#">Lihat Data</a></li>  
+          <?php }?> -->
+          <li><a href="#"><?$_SESSION['nama'];?></a></li>
         </ul>
       </div>
     </nav>
