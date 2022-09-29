@@ -30,6 +30,7 @@
           <li><a href="../tagihan/tagihan-siswa.php">Tagihan</a></li>
           <li><a href="#">Transaksi</a></li>
           <li><a href="#">Log Out</a></li>
+          <li><a href="../login/logout/logout.php">Log Out</a></li>
         </ul>
       </div>
     </nav>
