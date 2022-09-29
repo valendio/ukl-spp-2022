@@ -1,6 +1,4 @@
 
-<link rel="stylesheet" href="footer.css">
-
 <footer class="section bg-footer">
   <div class="container">
     <div>
@@ -15,14 +13,14 @@
       <h6 class="footer-heading text-uppercase text-white">Help</h6>
       <ul class="footer-link mt-4">
         <li><a href="#!">Register</a></li>
-        <li><a href="#!">Sign in</a></li>
+        <li><a href="../login/form-login.php">Sign in</a></li>
         <li><a href="#!">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="footer-link">
-      <h6 class="footer-heading text-uppercase text-white">Contact us</h6>
+      <h6 class="footer-heading text-uppercase text-white">Contact Me</h6>
       <p class="contact-info mt-4">Need help ?</p>
-      <p class="contact-info">+XX XX-XX-XX-XX-XX</p>
+      <p class="contact-info">+62 821-318-912-68</p>
       <div>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#!"><i class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
@@ -33,12 +31,11 @@
     </div>
   </div>
   <div class="text-center mt-5">
-    <p class="footer-alt">2022 © Society, All Rights Reserved</p>
+    <p class="footer-alt">2022 © oryzazvdio</p>
   </div>
-</footer>
-
-<style>
-  *, ::after, ::before {
+  
+  <style>
+    *, ::after, ::before {
   box-sizing: border-box;
 }
 
@@ -204,6 +201,7 @@ h6 {
     max-width: 960px;
   }
 }
+</footer>
 </style>
 </body>
 

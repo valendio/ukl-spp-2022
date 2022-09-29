@@ -1,9 +1,6 @@
 <?php
 include '../connect.php';
 session_start();
-// if(!(isset($_SESSION['user']))){
-//     header("location: ../login/form-login.php");
-// }
 
 $username = $_POST['nama'];
 $password = ($_POST['password']);
@@ -11,7 +8,7 @@ $password = ($_POST['password']);
 if($username == "" || $password == ""){
     header("location: ../homepage/home.php");
 } else {
-    $query = "SELECT * FROM siswa WHERE nama = '$username' AND password = '$password'";
+    $query = "SELECT * FROM petugas WHERE nama = '$username' AND password = '$password'";
     $result = mysqli_query($connect, $query);
 
     

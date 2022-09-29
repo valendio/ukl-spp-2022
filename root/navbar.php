@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
 <?php ?>
 
 <!DOCTYPE html>
@@ -11,11 +11,7 @@
 </head>
 <body>
 
-<?php 
-include "../root/footer.php";
-?>
-
-=======
+<!-- ======= -->
 <body>
 <div class="wrapper">
   <header>
@@ -24,14 +20,16 @@ include "../root/footer.php";
         <i class="fa fa-bars fa-2x"></i>
       </div>
       <div class="logo">
-        LOGO
+        <a href="../homepage/home.php">
+          <img src="../asset/img/ts.png" alt="logo ts" width=" 30rem" >
+        </a>
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="../homepage/home.php">Home</a></li>
+          <li><a href="../tagihan/tagihan-siswa.php">Tagihan</a></li>
+          <li><a href="#">Transaksi</a></li>
+          <li><a href="#">Log Out</a></li>
         </ul>
       </div>
     </nav>
@@ -69,7 +67,7 @@ body {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 9vh;
   /* background: url("https://images.unsplash.com/photo-1542652184-04fe4ec9d4d4?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ") no-repeat 50% 50%;
   background-size: cover; */
 }
@@ -168,6 +166,5 @@ nav ul li a {
 }
 </style>
     
->>>>>>> 6784f50 (update error Head)
 </body>
 </html>
