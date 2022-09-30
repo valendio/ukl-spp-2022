@@ -2,20 +2,20 @@
 if($_POST){
     $nama=$_POST['nama'];
     $nama_petugas= $_POST['nama_petugas'];
-    $password=$_POST['password'];
+    $pass=$_POST['password'];
     $role= $_POST['role'];
 
     if(empty($nama)){
         echo "<script>alert('nama tidak boleh kosong');location.href='form-signup.php';</script>";
     } elseif(empty($nama_petugas)){
         echo "<script>alert('Nama lengkap tidak boleh kosong');location.href='form-signup.php';</script>";
-    } elseif(empty($password)){
+    } elseif(empty($pass)){
         echo "<script>alert('password tidak boleh kosong');location.href='form-signup.php';</script>";
     } elseif(empty($role)){
             echo "<script>alert('role tidak boleh kosong');location.href='form-signup.php';</script>";
     } else {
         include "../connect.php";
-        $insert=mysqli_query($connect,"insert into petugas (nama,nama_petugas, password, role) value ('".$nama."','".$nama_petugas."','".$password."','".$role."')") or die(mysqli_error($connect));
+        $insert=mysqli_query($connect,"insert into petugas (nama, password, nama_petugas, role) value ('".$nama."','".$pass."','".$nama_petugas."','".$role."')") or die(mysqli_error($connect));
         if($insert){
             echo "<script>alert('Berhasil Membuat akun');location.href='form-signup.php';</script>";
         } else {

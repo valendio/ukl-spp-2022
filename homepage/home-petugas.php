@@ -11,7 +11,6 @@
 <?php include "../root/navbar.php";  ?>
 
 
-
 <?php include "../root/footer.php"; ?>
     
 </body>
