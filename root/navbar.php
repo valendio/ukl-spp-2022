@@ -1,6 +1,5 @@
 <!-- <<<<<<< HEAD -->
-<?php session_start(); 
-print_r($_SESSION);
+<?php session_start();
 ?>
 
 <!DOCTYPE html>
@@ -28,19 +27,30 @@ print_r($_SESSION);
       </div>
       <div class="menu">
         <ul>
-          <li><a href="../homepage/home.php">Home</a></li>
+        <?php if ($_SESSION['role'] == 'petugas' ) { ?>
+          <li><a href="../homepage/home-petugas.php">Home</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] == 'admin' ) { ?>
+          <li><a href="../homepage/home-petugas.php">Home</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] == 'siswa' ) { ?>
+          <li><a href="../homepage/home-siswa.php">Home</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] != 'petugas' ) { ?>
           <li><a href="../tagihan/tagihan-siswa.php">Tagihan</a></li>
+          <?php } ?>
+
           <li><a href="#">Transaksi</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><a href="#">Ada Aja</a></li>
           <li><a href="../login/logout/logout.php">Log Out</a></li>
-          <!-- <?php if($_SESSION['role'] == 'petugas') { ?>
+          <?php if ($_SESSION['role'] == 'petugas') { ?>
             <li><a href="#">Hapus Data</a></li>  
-          <?php }?>
-          <?php if($_SESSION['role'] == 'admin') { ?>
-            <li><a href="#">Lihat Data</a></li>  
-          <?php }?> -->
-          <li><a href="#"><?$_SESSION['nama'];?></a></li>
-        </ul>
+            <?php }?>
+            <?php if($_SESSION['role'] == 'admin') { ?>
+              <li><a href="#">Lihat Data</a></li>  
+              <?php }?> 
+            <li id="name-session" ><a href="#"><?php echo $_SESSION['nama'] ?></a></li>
+            </ul>
       </div>
     </nav>
   </header>
@@ -123,6 +133,10 @@ nav ul li {
   display: inline-block;
   padding: 20px;
 }
+
+/* #name-session {
+  margin-right: 20px;
+} */
 
 nav ul li a {
   text-decoration: none;

@@ -4,33 +4,46 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Form signup</title>
+        <title>FOrm Tambah siswa</title>
     </head>
     <body>
 
     
       <form action="signup.php" method="post">
       
-        <h1>Sign-up</h1>
+        <h1>Tambah Siswa</h1>
         
         <fieldset>
-          <legend><span class="number">1</span>Masukan Informasi Anda</legend>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="nama">
           
-          <label for="nama">Nama Panggilan:</label>
-          <input type="text" id="nama" name="nama">
+          <label for="mail">Nisn:</label>
+          <input type="number" id="nisn" name="nisn">
           
-          <label for="nama_petugas">Nama Lengkap:</label>
-          <input type="text" id="nama_petugas" name="nama_petugas">
+          <label for="mail">Nis:</label>
+          <input type="number" id="nis" name="nis">
 
           <label for="password">Password:</label>
-          <input type="text" id="password" name="password">
-
-          <select name="role" id="role">
-          <option value="petugas">Petugas</option>
-          <option value="admin">Admin</option>
+          <input type="password" id="password" name="user_password">
+          
+          <select name="kelas" id="kelas">
+          <option value="xir1">XI RPL 1</option>
+          <option value="xir2">XI RPL 2</option>
+          <option value="xir3">XI RPL 3</option>
+          <option value="xir4">XI RPL 4</option>
+          <option value="xir5">XI RPL 5</option>
+          <option value="xir6">XI RPL 6</option>
+          <option value="xir7">XI RPL 7</option>
+          <option value="xir8">XI RPL 8</option>
           </select>
         </fieldset>
-      
+        
+        <fieldset>
+          <label for="bio">Alamat:</label>
+          <textarea id="alamat" name="alamat"></textarea>
+        </fieldset>
+          
         <button type="submit">Tambah siswa</button>
       </form>
 

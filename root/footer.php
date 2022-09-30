@@ -12,9 +12,9 @@
     <div>
       <h6 class="footer-heading text-uppercase text-white">Help</h6>
       <ul class="footer-link mt-4">
-        <li><a href="#!">Register</a></li>
-        <li><a href="../login/form-login.php">Sign in</a></li>
-        <li><a href="#!">Privacy Policy</a></li>
+        <li><a href="../signup/form-signup.php">Register</a></li>
+        <li><a href="../login/form-login.php">Sign-in</a></li>
+        <li><a href="../login/logout/logout.php">Log-Out</a></li>
       </ul>
     </div>
     <div class="footer-link">

@@ -28,7 +28,6 @@
         <div class="col_md_sign_up">
         <div class="cont_ba_opcitiy">
           <h2>PETUGAS</h2>
-        
           
           <p>Login sebagai petugas</p>
         
@@ -37,8 +36,7 @@
           </div>
                </div>
         
-            
-            <div class="cont_back_info">
+               <div class="cont_back_info">
                <div class="cont_img_back_grey">
                <img src="https://images.unsplash.com/photo-1657299170950-87e5b0eaf77c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
                </div>
@@ -68,7 +66,6 @@
         
           </div>
           </form>
-          
             </div>
             
           </div>
