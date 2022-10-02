@@ -4,45 +4,49 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FOrm Tambah siswa</title>
+        <title>Form Tambah siswa</title>
     </head>
     <body>
 
     
-      <form action="signup.php" method="post">
+      <form action="add-siswa.php" method="post">
       
         <h1>Tambah Siswa</h1>
         
         <fieldset>
-          <legend><span class="number">1</span>Your basic info</legend>
+          <legend><span class="number"></span>Your basic info</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="nama">
           
-          <label for="mail">Nisn:</label>
+          <label for="nisn">Nisn:</label>
           <input type="number" id="nisn" name="nisn">
           
-          <label for="mail">Nis:</label>
+          <label for="nis">Nis:</label>
           <input type="number" id="nis" name="nis">
 
           <label for="password">Password:</label>
-          <input type="password" id="password" name="user_password">
+          <input type="text" id="password" name="password">
           
-          <select name="kelas" id="kelas">
-          <option value="xir1">XI RPL 1</option>
-          <option value="xir2">XI RPL 2</option>
-          <option value="xir3">XI RPL 3</option>
-          <option value="xir4">XI RPL 4</option>
-          <option value="xir5">XI RPL 5</option>
-          <option value="xir6">XI RPL 6</option>
-          <option value="xir7">XI RPL 7</option>
-          <option value="xir8">XI RPL 8</option>
+          <select name="id_kelas" id="id_kelas">
+          <option value="1">XI RPL 1</option>
+          <option value="2">XI RPL 2</option>
+          <option value="3">XI RPL 3</option>
+          <option value="4">XI RPL 4</option>
+          <option value="5">XI RPL 5</option>
+          <option value="6">XI RPL 6</option>
+          <option value="7">XI RPL 7</option>
+          <option value="8">XI RPL 8</option>
           </select>
         </fieldset>
         
         <fieldset>
-          <label for="bio">Alamat:</label>
+          <label for="bio">Alamat:</label>  
           <textarea id="alamat" name="alamat"></textarea>
         </fieldset>
+
+        
+        <label for="no_tlp">HP:</label>
+          <input type="number" id="no_tlp" name="no_tlp">
           
         <button type="submit">Tambah siswa</button>
       </form>
