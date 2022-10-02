@@ -31,7 +31,7 @@
           </select>
         </fieldset>
       
-        <button type="submit">Tambah siswa</button>
+        <button type="submit">Sign up</button>
       </form>
 
       <style>

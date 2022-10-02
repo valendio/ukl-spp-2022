@@ -4,15 +4,17 @@
     <div>
       <h6 class="footer-heading text-uppercase text-white">Informations</h6>
       <ul class="footer-link mt-4">
-        <li><a href="#!">Project</a></li>
-        <li><a href="#!">Our team</a></li>
-        <li><a href="#!">Terms of Services</a></li>
+        <li><a href="https://linktr.ee/oryzavalendio">About Me</a></li>
+        <li><a href="https://github.com/valendio/ukl-spp-2022.git">Souce Code</a></li>
+        <li><a href="https://twitter.com/orzvd406">Social Media</a></li>
       </ul>
     </div>
     <div>
       <h6 class="footer-heading text-uppercase text-white">Help</h6>
       <ul class="footer-link mt-4">
-        <li><a href="../signup/form-signup.php">Register</a></li>
+      <?php if ($_SESSION['role'] != 'siswa' ) { ?>
+          <li><a href="../signup/form-signup.php">Register</a></li>
+          <?php } ?>
         <li><a href="../login/form-login.php">Sign-in</a></li>
         <li><a href="../login/logout/logout.php">Log-Out</a></li>
       </ul>
@@ -203,6 +205,10 @@ h6 {
 }
 </footer>
 </style>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </body>
 
 </html>

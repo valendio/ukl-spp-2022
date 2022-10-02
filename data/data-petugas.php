@@ -43,6 +43,8 @@
         <td class="lalign"><?= $data_petugas['nama_petugas'] ?></td>
         <td class="lalign"><?= $data_petugas['password'] ?></td>
         <td class="lalign"><?= $data_petugas['role'] ?></td>
+        <td class="lalign"></td>
+        <td class="lalign"><a href="petugas-delete.php?id__petugas=<?= $data_petugas['id_petugas'] ?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
           
       </tr>
         <?php

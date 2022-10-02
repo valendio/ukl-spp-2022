@@ -1,15 +1,7 @@
 <!-- <<<<<<< HEAD -->
 <?php session_start();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPP Moklet</title>
-</head>
+  
 <body>
 
 <!-- ======= -->
@@ -36,19 +28,29 @@
           <?php if ($_SESSION['role'] == 'siswa' ) { ?>
           <li><a href="../homepage/home-siswa.php">Home</a></li>
           <?php } ?>
-          <?php if ($_SESSION['role'] != 'petugas' ) { ?>
+          <?php if ($_SESSION['role'] == 'siswa' ) { ?>
           <li><a href="../tagihan/tagihan-siswa.php">Tagihan</a></li>
           <?php } ?>
-
-          <li><a href="#">Transaksi</a></li>
-          <li><a href="#">Ada Aja</a></li>
-          <li><a href="../login/logout/logout.php">Log Out</a></li>
+          
+          <?php if ($_SESSION['role'] == 'petugas' ) { ?>
+          <li><a href="../tagihan/tagihan-siswa.php">Transaksi</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] == 'admin' ) { ?>
+          <li><a href="../tagihan/tagihan-siswa.php">Transaksi</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] == 'admin' ) { ?>
+          <li><a href="../data/data-petugas.php">Data Petugas</a></li>
+          <?php } ?>
+          <?php if ($_SESSION['role'] == 'admin' ) { ?>
+          <li><a href="../data/data-siswa.php">Data Siswa</a></li>
+          <?php } ?>
           <?php if ($_SESSION['role'] == 'petugas') { ?>
-            <li><a href="#">Hapus Data</a></li>  
-            <?php }?>
-            <?php if($_SESSION['role'] == 'admin') { ?>
-              <li><a href="#">Lihat Data</a></li>  
-              <?php }?> 
+          <li><a href="#">Hapus Data</a></li>  
+          <?php }?>
+          <?php if($_SESSION['role'] == 'admin') { ?>
+          <li><a href="#">Lihat Data</a></li>  
+          <?php }?> 
+              <li><a href="../login/logout/logout.php">Log Out</a></li>
             <li id="name-session" ><a href="#"><?php echo $_SESSION['nama'] ?></a></li>
             </ul>
       </div>

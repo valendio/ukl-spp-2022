@@ -4,52 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Petugas</title>
 </head>
 <body>
 
-<h3>Tampil Siswa</h3>
-    <table class="table table-hover table-striped">
-        <thead>
-            <tr>
-                <th>NO</th>
-                <th>NISN</th>
-                <th>NIS</th>
-                <th>Nama</th>
-                <th>PASSWORD</th>
-                <th>ID KELAS</th>
-                <th>ALAMAT</th>
-                <th>NO TLP</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            include "../connect.php";
-            $qry_siswa = mysqli_query($conn, "select * from siswa join kelas on kelas.id_kelas=siswa.id_kelas");
-            $no = 0;
-            while ($data_siswa = mysqli_fetch_array($qry_siswa)) {
-                $no++; ?>
-                <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $data_siswa['nama_siswa'] ?></td>
-                    <td><?= $data_siswa['tanggal_lahir'] ?></td>
-                    <td><?= $data_siswa['alamat'] ?></td>
-                    <td><?= $data_siswa['gender'] ?></td>
-                    <td><?= $data_siswa['username'] ?></td>
-                    <td><?= $data_siswa['nama_kelas'] ?></td>
-                    <td>
-                        <a href="./ubah_siswa.php?id_siswa=<?= $data_siswa['id_siswa'] ?>" class="btn btn-success">Ubah</a> |
-                        <a href="hapus_siswa.php?id_siswa=<?= $data_siswa['id_siswa'] ?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a>
-                    </td>
+ <?php include "../root/navbar.php"; ?>
 
-                </tr>
-            <?php
-            }
-            ?>
-        </tbody>
-    </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ <body>
+ <div id="wrapper">
+  <h1>Data Siswa</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+  <thead>
+      <tr>
+        <th><span>No.</span></th>
+        <th><span>NISN</span></th>
+        <th><span>NIS</span></th>
+        <th><span>Nama</span></th>
+        <th><span>Password</span></th>
+        <th><span>Kelas</span></th>
+        <th><span>Alamat</span></th>
+        <th><span>No Telp</span></th>
+        <th><span>Ubah</span></th>
+        <th><span>Hapus</span></th>
+      </tr>
+    </thead>
 
+    <tbody>
+      <?php 
+      
+      include "../connect.php";
+      $qry_siswa = mysqli_query($connect, "SELECT * FROM `siswa`");
+      $no = 0;
+      while ($data_siswa = mysqli_fetch_array($qry_siswa)){
+        $no++; ?>
+        <tr>
+        <td class="lalign"><?= $no ?></td>
+        <td class="lalign"><?= $data_siswa['nisn'] ?></td>
+        <td class="lalign"><?= $data_siswa['nis'] ?></td>
+        <td class="lalign"><?= $data_siswa['nama'] ?></td>
+        <td class="lalign"><?= $data_siswa['password'] ?></td>
+        <td class="lalign"><?= $data_siswa['id_kelas'] ?></td>
+        <td class="lalign"><?= $data_siswa['alamat'] ?></td>
+        <td class="lalign"><?= $data_siswa['no_tlp'] ?></td>
+          
+      </tr>
+        <?php
+      }
+      ?>
+    </tbody>
+  </table>
+ </div> 
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Amarante');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body {  https://subtlepatterns.com/weave/ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding: 22px 10px;
+  padding-bottom: 55px;
+}
+
+::selection { background: #5f74a0; color: #fff; }
+::-moz-selection { background: #5f74a0; color: #fff; }
+::-webkit-selection { background: #5f74a0; color: #fff; }
+
+br { display: block; line-height: 1.6em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 { 
+  font-family: 'Amarante', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 1300px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10px 17px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+</style>
+
+<script>
+    $(function(){
+  $('#keywords').tablesorter(); 
+});
+</script>
     
 </body>
 </html>

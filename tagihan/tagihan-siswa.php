@@ -10,13 +10,16 @@
 </head>
 <body>
 
+<div class="msg">
+  <p class="message">Data Tunggakan SPP bulanan</p>
+  <h1>Rp.500.000</h1>
+</div>
 
-<p class="message">Data Tunggakan SPP bulanan</p>
-<h1>Rp.500.000</h1>
-
-<form action="proses-bayar.php" method="post">
-    <button type="submit">Bayar</button>
-</form>
+<div class="btn-bayar">
+  <form action="proses-bayar.php" method="post">
+      <button type="submit">Bayar</button>
+  </form>
+</div>
 
 <style>
     body {
@@ -32,15 +35,22 @@ button {
   padding: 1rem;
 }
 
+.msg h1 {
+  text-align: center;
+}
+
+.btn-bayar button {
+  display: flex;
+  margin: 0px auto;
+}
+
 .message {
-  background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAnFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////8tLS0uLi4vLy80NDQ2NjY3NzdHR0dISEhUVFRVVVVfX19gYGCEhISFhYWRkZGSkpKVlZWnp6epqamwsLC/v7/AwMDHx8fJycnKysrf39/q6urr6+v19fX+/v7///8fnxNaAAAAFXRSTlMAASI4RG2DkJmapa2/wsPZ5+7y8/y7h6PLAAABQUlEQVR4AZXV+1LqMBAG8G0TSmlLL7ThHAERUUTwgvi9/7s5IgPZTBKa39/fZLKTzS4ZIpFkRdVOqiJLREQ+Mq2hqVNJLmIME8aCbOIcVnlsuUEDh0aSYdDBqRsQM4TXkJ2LG7SzZYcbOklncYObmpj+5OghpxOBXgT9KsGst7AqT9WBeVR3B1hJIhoZ2f9vsEuJorpnFnXEy1srzWy5ORolJtBsp4pZfECTUAYj/YKzw+5BTfV0RgWcaXw/qYV2k4IqmOl/n9f0Sm1wUVELM/2Kq51a4qKlCXy+1AwXE6r6hysq4LPXr1FQBg9eYEaJL/us5kf9UQRcDvsVfxRhNBIUM3/njUSpKzy7542U8ub3k+xb+ZVBHzZkFAQNmZDxFTYYw0du+DD3r4ngBWQSpeXdBLnIEV+aI0l2bB231nX8A0IiFi5aF0LTAAAAAElFTkSuQmCC") no-repeat 9px 50%;
-  background-size: 22px;
   color: #000;
   display: block;
   padding: 8px 8px 8px 40px;
   margin-bottom: 15px;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   vertical-align: top;
   animation: slideAndFade 3s ease;
