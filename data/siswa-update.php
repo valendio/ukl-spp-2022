@@ -14,7 +14,7 @@ if ($_POST) {
     } else {
         include "../connect.php";
         if (empty($password)) {
-            $update = mysqli_query($connect, "update siswa set nama='" . $nama . "',password='" . $pass . "', id_kelas='" . $id_kelas . "', alamat='" . $alamat . "', no_tlp='" . $no_tlp ."' where id_siswa = '" . $nama . "' ") or die(mysqli_error($connect));
+            $update = mysqli_query($connect, "update siswa set nama='" . $nama . "',password='" . $pass . "', id_kelas='" . $id_kelas . "', alamat='" . $alamat . "', no_tlp='" . $no_tlp ."' where nisn = '" . $nisn . "' ") or die(mysqli_error($connect));
             if ($update) {
                 echo "<script>alert('Sukses update siswa');location.href='data-siswa.php';</script>";
             } else {

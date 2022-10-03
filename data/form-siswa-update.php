@@ -11,7 +11,7 @@
     <?php
     include "../connect.php";
     $qry_get_siswa = mysqli_query($connect, "select * from siswa where 
-    nis = '" . $_GET['nis'] . "'");
+    nisn = '" . $_GET['nisn'] . "'");
     $dt_siswa = mysqli_fetch_array($qry_get_siswa);
     ?>
     

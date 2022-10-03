@@ -8,8 +8,9 @@
 </head>
 <body>
 
- <?php include "../root/navbar.php"; ?>
 
+
+ <?php include "../root/navbar.php";?>
  <body>
  <div id="wrapper">
   <h1>Data Siswa</h1>
