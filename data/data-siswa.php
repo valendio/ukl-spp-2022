@@ -47,6 +47,8 @@
         <td class="lalign"><?= $data_siswa['id_kelas'] ?></td>
         <td class="lalign"><?= $data_siswa['alamat'] ?></td>
         <td class="lalign"><?= $data_siswa['no_tlp'] ?></td>
+        <td class="lalign"><a href="form-siswa-update.php?nisn=<?= $data_siswa['nisn'] ?>" onclick="return confirm('Apakah anda yakin Mengubah data ini?')" class="btn btn-danger">Ubah</a></td>
+        <td class="lalign"><a href="siswa-delete.php?nisn=<?= $data_siswa['nisn'] ?>" onclick="return confirm('Apakah anda yakin Menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
           
       </tr>
         <?php

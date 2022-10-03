@@ -8,6 +8,11 @@
 </head>
 <body>
 
+      <script>
+          $(function(){
+        $('#keywords').tablesorter(); 
+      });
+      </script>
  <?php include "../root/navbar.php"; ?>
 
  <body>
@@ -44,7 +49,7 @@
         <td class="lalign"><?= $data_petugas['password'] ?></td>
         <td class="lalign"><?= $data_petugas['role'] ?></td>
         <td class="lalign"></td>
-        <td class="lalign"><a href="petugas-delete.php?id__petugas=<?= $data_petugas['id_petugas'] ?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
+        <td class="lalign"><a href="petugas-delete.php?id_petugas=<?= $data_petugas['id_petugas'] ?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
           
       </tr>
         <?php
@@ -172,11 +177,6 @@ h1 {
 }
 </style>
 
-<script>
-    $(function(){
-  $('#keywords').tablesorter(); 
-});
-</script>
     
 </body>
 </html>
