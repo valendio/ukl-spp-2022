@@ -38,15 +38,29 @@
           <?php if ($_SESSION['role'] == 'admin' ) { ?>
           <li><a href="../tagihan/tagihan-siswa.php">Transaksi</a></li>
           <?php } ?>
+          <!-- Lihat Data -->
           <?php if ($_SESSION['role'] == 'admin' ) { ?>
           <li><a href="../data/data-petugas.php">Data Petugas</a></li>
           <?php } ?>
           <?php if ($_SESSION['role'] == 'admin' ) { ?>
           <li><a href="../data/data-siswa.php">Data Siswa</a></li>
           <?php } ?>
+          <?php if ($_SESSION['role'] == 'petugas' ) { ?>
+          <li><a href="../data/data-siswa.php">Data Siswa</a></li>
+          <?php } ?>
+          <!-- End of Lihat Data -->
+          <!-- Add User -->
           <?php if ($_SESSION['role'] == 'petugas') { ?>
-          <li><a href="#">Hapus Data</a></li>  
+          <li><a href="../add-user/form-add-siswa.php">Tambah siswa</a></li>  
           <?php }?>
+          <?php if($_SESSION['role'] == 'admin') { ?>
+          <li><a href="../add-user/form-add-siswa.php">Tambah Siswa</a></li>  
+          <?php }?> 
+          <?php if($_SESSION['role'] == 'admin') { ?>
+          <li><a href="../add-user/form-add-petugas.php">Tambah Petugas</a></li>  
+          <?php }?> 
+          <!-- End of Add user -->
+
           <?php if($_SESSION['role'] == 'admin') { ?>
           <li><a href="#">Lihat Data</a></li>  
           <?php }?> 
